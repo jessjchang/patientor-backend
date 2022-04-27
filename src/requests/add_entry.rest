@@ -1,0 +1,42 @@
+POST http://localhost:3001/api/patients//d2773336-f723-11e9-8f0b-362b9e155667/entries
+Content-Type: application/json
+
+{
+  "date": "2020-01-01",
+  "type": "OccupationalHealthcare",
+  "specialist": "specialist1",
+  "employerName": "employer1",
+  "diagnosisCodes": ["Z57.1"],
+  "description": "description of what happened",
+  "sickLeave": {
+    "startDate": "2020-02-01",
+    "endDate": "2020-02-02"
+  }
+}
+
+###
+POST http://localhost:3001/api/patients//d2773336-f723-11e9-8f0b-362b9e155667/entries
+Content-Type: application/json
+
+{
+  "date": "2020-01-01",
+  "type": "Hospital",
+  "specialist": "specialist1",
+  "description": "description of what happened",
+  "discharge": {
+    "date": "2020-02-01",
+    "criteria": "criteria1"
+  }
+}
+
+###
+POST http://localhost:3001/api/patients//d2773336-f723-11e9-8f0b-362b9e155667/entries
+Content-Type: application/json
+
+{
+  "date": "2020-01-01",
+  "type": "HealthCheck",
+  "specialist": "specialist1",
+  "description": "description of what happened",
+  "healthCheckRating": "0"
+}
